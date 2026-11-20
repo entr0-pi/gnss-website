@@ -171,7 +171,6 @@ load.then(({boards}) => {
     if (c) { navigator.clipboard?.writeText(c.dataset.copy); const l = c.textContent; c.textContent = 'Copied ✓'; setTimeout(() => c.textContent = l, 1200); }
   });
   $('hx').addEventListener('click', () => hd.close());
-
   const copyBtn = (t, label='Copy') => `<button class="copy" data-copy="${esc(t)}">${label}</button>`;
   const spec = (k,v) => v ? `<div class="spec"><div class="k">${k}</div><div class="v">${esc(v)}</div></div>` : '';
   const fwRow = (icon, label, f) => `<div class="fw"><div class="l"><b>${icon} ${label}</b><code>${esc(f)}</code></div>
